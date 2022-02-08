@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>carleyjmartin</title>		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+		</style>
+		<style>
+		body {
+			background-color:#454545;
+
+		}
+		.button-link {
+			background-color:#019485;
+			color:#ffffff;
+			font-family: 'Quicksand', sans-serif;
+			font-weight: bold;
+			font-size: 10px;
+			border:none;
+			border-radius: 20px;
+			width:100%;
+			margin:10px;
+			transition: background-color 1s, box-shadow 1s;
+		}
+		.button-link:hover {
+  			background-color: #014d45;
+  			box-shadow: 0px 0px 10px 10px rgba(0,0,0,.1);
+		}
+		h2 {
+			font-family: 'Quicksand', sans-serif;
+			font-weight: bold;
+			color:#ffffff;
+			font-size:40px;
+		}
+		h3 {
+			font-family: 'Quicksand', sans-serif;
+			color:#019485;
+			font-size:20px;
+		}
+		#title1 {
+			position:fixed;
+			width:400px;
+			right:50%;
+			transform: translate(50%, 50%);
+			text-align: center;
+
+		}
+		#title2 {
+			position:fixed;
+			width:400px;
+			right:50%;
+			transform: translate(50%, 50%);
+			top:45px;
+			text-align: right;
+		}
+		.zoom {
+  			transform: scale(1.3);
+  			transition: transform 6s;
+
+		}
+		#nav-bar {
+			margin-top:100px;
+		}
+		#header {
+			background-color:#454545;
+
+		}
+		.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #019485;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #019485;
+  background: #019485;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+		</style>	
+
+	</head>
+	<body class='body-class'>
+		<div id='header'>	
+			<div class=row>
+		  		<div class='col-12 d-flex justify-content-center'>
+					<h2 id='title1'> P. T. &nbsp; R E C I P E S</h2>
+					<h3 id='title2'>p r e t t y&nbsp;&nbsp;t a s t y</h3>
+		  		</div>
+			</div>
+			<div id='nav-bar' class='row d-flex justify-content-center'>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>BREAKFAST</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>VEGGIE</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>VEGAN</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>BEEF</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>CHICKEN</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>PORK</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>LAMB</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>SEAFOOD</button>
+				</div>				
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>PUDDING</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>MISC</button>
+				</div>
+				<div class='nav-option col-lg-1 col-md-2 col-sm-4'>
+					<button class='button-link' id='crochet-btn'>BULK/SKILLS</button>
+				</div>	
+			</div>
+		</div><!-- end of header -->
+
+		<div id='ingredient-search-div'>
+			<div class="wrap">
+   				<div class="search">
+      				<input type="text" class="searchTerm" placeholder="What ingredients do you have?" style="height:36px;">
+      				<button type="submit" class="searchButton">
+        				<i class="fa fa-search"></i>
+     				</button>
+   				</div>
+			</div>
+		</div>
+
+		<div id='results-section'>
+		</div>
+
+	<script>
+			$(document).ready(function() { 
+				// http://carleyjmartin.github.io/carleyjmartin.github.io/assets/json/recipes.json
+				$.getJSON("recipes.json", function(json) {
+    				console.log(json); 
+				});
+			});
+		</script>
+	</body>
+
+</html>
